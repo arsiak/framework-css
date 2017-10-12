@@ -1,0 +1,75 @@
+/*
+• sous-titres : prévoir la possibilité d'inclure du texte <small> à l'intérieur d'un titre
+h1..h6 ; ce texte sera réduit en taille et affiché en gris. De même, prévoir une classe
+qui pourra être ajoutée à une balise h1..h6 avec le même effet.
+
+• paragraphes : les paragraphes sont affichés avec le style par défaut hérité de body
+(à définir), en ajoutant une marge en dessous correspondant à l'inter-patagraphe.
+• balises de texte inline : définir le rendu par défaut des balises de texte <mark>,
+<del>, <ins>, <u>, <strong>, <em>, <abbr>
+
+• Alignements et transformations: prévoir des classes pour définir différents modes
+d'alignement de texte : gauche, droite, centré, justifié, ainsi que des
+transformations : majuscules, minuscules
+
+• listes : régler la mise en forme des listes <ul><li> avec un affichage par défaut
+utilisant une puce. Prévoir des classes pour un affichage avec un square, et sans
+décoration.
+
+Règles complémentaires :
+• quote & blockquote : définir une mise en forme pour les textes « quotés » ou
+correspondant à du code. On traitera les balises <blockquote> - qui permet de
+quoter les éléments html inclus, <code> - qui permet d'afficher des fragments de
+code informatique, ainsi que <pre>, et <kbd>. La mise en forme est différente pour
+chacune de ces balises.
+
+• tables : créer une classe pour la mise en forme par défaut des tableaux html. Cette
+classe prend en compte les titre de colonnes, et fait une mise en forme sobre ;
+créer des classes qui viennent compléter cette classe de base pour ajouter des
+éléments supplémentaires de mise en forme : lignes alternées, bordures complètes,
+lignes actives au survol.*/
+
+@import url('https://fonts.googleapis.com/css?family=Merriweather|Open+Sans');
+
+html{
+	font-size: 18px;
+}
+
+body{
+	font-size: 1rem;
+}
+
+p{
+	margin-bottom: 4em;
+}
+
+h1,h2,h3,h4,h5,h6{
+	color: black;
+	font-family: 'Open Sans', sans-serif,
+				Helvetica, sans-serif;
+	font-weight: bold;
+}
+
+h1{
+	font-size: 3rem;
+}
+
+h2{
+	font-size: 2.5rem;
+}
+
+h3{
+	font-size: 2rem;
+}
+
+h4{
+	font-size: 1.75rem;
+}
+
+h5{
+	font-size: 1.50rem;
+}
+
+h6{
+	font-size: 1.25rem;
+}
