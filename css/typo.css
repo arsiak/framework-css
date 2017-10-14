@@ -1,8 +1,6 @@
 /*
 Règles complémentaires :
-• quote & blockquote : définir une mise en forme pour les textes « quotés » ou
-correspondant à du code. On traitera les balises blockquote> - qui permet de
-quoter les éléments html inclus, code> - qui permet d'afficher des fragments de
+•code> - qui permet d'afficher des fragments de
 code informatique, ainsi que pre>, et kbd>. La mise en forme est différente pour
 chacune de ces balises.
 
@@ -154,4 +152,18 @@ blockquote:after {
     top: 0;
     right: 0;
     content: "\201D";
+}
+
+pre {
+	white-space: pre-wrap;
+	white-space: -moz-pre-wrap;
+	white-space: -o-pre-wrap;
+	word-wrap: break-word;
+}
+
+pre code {
+  background-color: #eee;
+  border: 1px solid #999;
+  display: block;
+  padding: 20px;
 }
