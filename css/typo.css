@@ -174,3 +174,17 @@ kbd {
 	font-size: 1em;
 	text-decoration:none;
 }
+
+/*Table css*/
+
+.table-classic { 
+	border-spacing: 0.5rem;
+	border-spacing: collapse;
+}
+
+.table-classic th {
+	width: 4rem;
+  	height: 2rem;
+  	border: 1px solid #ccc;
+  	text-align: center;
+}
