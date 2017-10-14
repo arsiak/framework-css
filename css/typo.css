@@ -1,9 +1,4 @@
 /*
-
-• listes : régler la mise en forme des listes ul>li> avec un affichage par défaut
-utilisant une puce. Prévoir des classes pour un affichage avec un square, et sans
-décoration.
-
 Règles complémentaires :
 • quote & blockquote : définir une mise en forme pour les textes « quotés » ou
 correspondant à du code. On traitera les balises blockquote> - qui permet de
@@ -126,4 +121,17 @@ em{
 
 .text--lowercase{
 	text-transform: lowercase;
+}
+
+/* List styles */
+ul>li{
+	list-style-type: square; 
+}
+
+.list--square{
+	list-style-type: square;
+}
+
+.liste--normal{
+	list-style-type: none;
 }
