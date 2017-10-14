@@ -1,9 +1,4 @@
 /*
-Règles complémentaires :
-•code> - qui permet d'afficher des fragments de
-code informatique, ainsi que pre>, et kbd>. La mise en forme est différente pour
-chacune de ces balises.
-
 • tables : créer une classe pour la mise en forme par défaut des tableaux html. Cette
 classe prend en compte les titre de colonnes, et fait une mise en forme sobre ;
 créer des classes qui viennent compléter cette classe de base pour ajouter des
@@ -22,6 +17,7 @@ body {
 
 p {
 	margin-bottom: 1.75em;
+	line-height: 1.75em;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -166,4 +162,15 @@ pre code {
   border: 1px solid #999;
   display: block;
   padding: 20px;
+}
+
+kbd {
+	border:1px solid #666;
+	border-radius:2px;
+	padding:2px 4px;
+	background-color:#333;
+	color: white;
+	margin: 2px;
+	font-size: 1em;
+	text-decoration:none;
 }
