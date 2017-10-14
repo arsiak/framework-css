@@ -14,71 +14,71 @@ lignes actives au survol.*/
 
 @import url('https://fonts.googleapis.com/css?family=Merriweather|Open+Sans');
 
-html{
+html {
 	font-size: 18px;
 }
 
-body{
+body {
 	font-size: 1rem;
 }
 
-p{
+p {
 	margin-bottom: 1.75em;
 }
 
-h1,h2,h3,h4,h5,h6{
+h1, h2, h3, h4, h5, h6 {
 	color: black;
 	font-family: 'Open Sans', sans-serif,
 				Helvetica, sans-serif;
 	font-weight: bold;
 }
 
-h1 small, h2 small, h3 small, h4 small, h5 small, h6 small{
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
 	font-size: small;
 	font-weight: grey;
 }
 
-
-h1{
+ 
+h1 {
 	font-size: 3rem;
 }
 
-h2{
+h2 {
 	font-size: 2.5rem;
 }
 
-h3{
+h3 {
 	font-size: 2rem;
 }
 
-h4{
+h4 {
 	font-size: 1.75rem;
 }
 
-h5{
+h5 {
 	font-size: 1.50rem;
 }
 
-h6{
+h6 {
 	font-size: 1.25rem;
 }
 
-.text--small{
+.text--small {
 	font-size: small;
 	color: grey;
 }
 
 
-mark{
+mark {
 	background-color: yellow;
 	color: black; 
 }
 
-del{
+del {
 	text-decoration: line-through;
 } 
 
-ins{
+ins {
 	text-decoration: underline;
 } 
 
@@ -86,11 +86,11 @@ u{
 	text-decoration: underline;
 }
 
-strong{
+strong {
 	font-weight: bold;
 }
 
-em{
+em {
 	font-weight: italic;
 } 
 
@@ -99,39 +99,59 @@ em{
 
 /* text alignement */
 
-.text-align--center{
+.text-align--center {
 	text-align: center;
 }
 
-.text-align--left{
+.text-align--left {
 	text-align: left;
 }
 
-.text-align--right{
+.text-align--right {
 	text-align: right;
 }
 
-.text-align--justify{
+.text-align--justify {
 	text-align: justify;
 }
 
-.text--uppercase{
+.text--uppercase {
 	text-transform: uppercase;
 }
 
-.text--lowercase{
+.text--lowercase {
 	text-transform: lowercase;
 }
 
 /* List styles */
-ul>li{
-	list-style-type: square; 
+ul li {
+	list-style-type: circle; 
 }
 
-.list--square{
+.list--square li {
 	list-style-type: square;
 }
 
-.liste--normal{
+.list--normal li {
 	list-style-type: none;
+}
+
+/* blockquote */
+blockquote {
+  	margin-bottom: 1.75em;
+  	margin-left: 2%;
+  	padding-left: 2%;
+  	border-left: 3px solid #ccc;
+}
+
+blockquote:before {
+    top: 0;
+    left: 0;
+    content: "\201C";
+}
+
+blockquote:after {
+    top: 0;
+    right: 0;
+    content: "\201D";
 }
