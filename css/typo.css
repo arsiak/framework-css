@@ -1,9 +1,5 @@
 /*
 
-• Alignements et transformations: prévoir des classes pour définir différents modes
-d'alignement de texte : gauche, droite, centré, justifié, ainsi que des
-transformations : majuscules, minuscules
-
 • listes : régler la mise en forme des listes ul>li> avec un affichage par défaut
 utilisant une puce. Prévoir des classes pour un affichage avec un square, et sans
 décoration.
@@ -105,3 +101,29 @@ em{
 
 /*Balise abbr ?*/
 
+
+/* text alignement */
+
+.text-align--center{
+	text-align: center;
+}
+
+.text-align--left{
+	text-align: left;
+}
+
+.text-align--right{
+	text-align: right;
+}
+
+.text-align--justify{
+	text-align: justify;
+}
+
+.text--uppercase{
+	text-transform: uppercase;
+}
+
+.text--lowercase{
+	text-transform: lowercase;
+}
