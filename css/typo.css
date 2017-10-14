@@ -1,26 +1,18 @@
 /*
-• sous-titres : prévoir la possibilité d'inclure du texte <small> à l'intérieur d'un titre
-h1..h6 ; ce texte sera réduit en taille et affiché en gris. De même, prévoir une classe
-qui pourra être ajoutée à une balise h1..h6 avec le même effet.
-
-• paragraphes : les paragraphes sont affichés avec le style par défaut hérité de body
-(à définir), en ajoutant une marge en dessous correspondant à l'inter-patagraphe.
-• balises de texte inline : définir le rendu par défaut des balises de texte <mark>,
-<del>, <ins>, <u>, <strong>, <em>, <abbr>
 
 • Alignements et transformations: prévoir des classes pour définir différents modes
 d'alignement de texte : gauche, droite, centré, justifié, ainsi que des
 transformations : majuscules, minuscules
 
-• listes : régler la mise en forme des listes <ul><li> avec un affichage par défaut
+• listes : régler la mise en forme des listes ul>li> avec un affichage par défaut
 utilisant une puce. Prévoir des classes pour un affichage avec un square, et sans
 décoration.
 
 Règles complémentaires :
 • quote & blockquote : définir une mise en forme pour les textes « quotés » ou
-correspondant à du code. On traitera les balises <blockquote> - qui permet de
-quoter les éléments html inclus, <code> - qui permet d'afficher des fragments de
-code informatique, ainsi que <pre>, et <kbd>. La mise en forme est différente pour
+correspondant à du code. On traitera les balises blockquote> - qui permet de
+quoter les éléments html inclus, code> - qui permet d'afficher des fragments de
+code informatique, ainsi que pre>, et kbd>. La mise en forme est différente pour
 chacune de ces balises.
 
 • tables : créer une classe pour la mise en forme par défaut des tableaux html. Cette
@@ -40,7 +32,7 @@ body{
 }
 
 p{
-	margin-bottom: 4em;
+	margin-bottom: 1.75em;
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -49,6 +41,12 @@ h1,h2,h3,h4,h5,h6{
 				Helvetica, sans-serif;
 	font-weight: bold;
 }
+
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small{
+	font-size: small;
+	font-weight: grey;
+}
+
 
 h1{
 	font-size: 3rem;
@@ -73,3 +71,37 @@ h5{
 h6{
 	font-size: 1.25rem;
 }
+
+.text--small{
+	font-size: small;
+	color: grey;
+}
+
+
+mark{
+	background-color: yellow;
+	color: black; 
+}
+
+del{
+	text-decoration: line-through;
+} 
+
+ins{
+	text-decoration: underline;
+} 
+
+u{
+	text-decoration: underline;
+}
+
+strong{
+	font-weight: bold;
+}
+
+em{
+	font-weight: italic;
+} 
+
+/*Balise abbr ?*/
+
