@@ -90,9 +90,85 @@ d'avertissement et de danger. */
 .btn--black {
 	background-color: black;
 	color: white;
+	border-color: black;
 }
 
 .btn--black:hover {
 	color: white;
-	border-color: black;
+	border-color: white;
+	background-color: black;
 }
+
+.btn--green {
+	background-color: green;
+	color: white;
+	border-color: white;
+}
+
+.btn--green:hover {
+	color: white;
+	border-color: white;
+	background-color: green;
+}
+
+.btn--yellow {
+	background-color: yellow;
+	border-color: white;
+	color: white;
+}
+
+.btn--yellow:hover {
+	border-color: yellow;
+}
+
+.btn__text--red {
+	color: red;
+}
+
+.btn__text--yellow {
+	color: yellow;
+}
+
+.btn__text--green {
+	color: green;
+}
+
+.btn--xxl{
+	width: 100%;
+}
+
+.btn--flat {
+	/*TODO*/
+}
+
+.btn--fancy {
+	/*TODO*/
+}
+
+.alert {
+	color:#555;
+    border-radius:10px;
+    padding:10px 10px 10px 36px;
+    margin:10px;
+}
+
+.alert--success {
+	background-color:#87FF7E ;
+	border: 1px solid black;
+}
+
+.alert--warning {
+	background-color: #FFF889;
+	border: 1px solid black;
+}
+
+.alert--error {
+	background-color: #E76264;
+	border: 1px solid black;
+}
+
+.alert--info {
+	background-color: #60C2FF;
+	border : 1px solid black;
+}
+

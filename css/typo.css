@@ -111,9 +111,6 @@ em {
 }
 
 /* List styles */
-ul li {
-	list-style-type: circle; 
-}
 
 .list--square li {
 	list-style-type: square;

@@ -1,0 +1,55 @@
+/*En utilisant flex, réaliser les composants génériques suivants, qui tous s'appliquent à une structure « <ul>
+<li> <li> </ul> ». Ces composants doivent s'adapter à différentes largeur de terminal.
+Ces composants génériques viendront s'ajouter à votre framework, en compléments des boutons et des règles
+typographiques.
+barre de navigation : la classe .navbar définit une barre de navigation par défaut. Elle s'applique à l'élément
+<ul>. On doit gérer le survol des éléments du menu. 2 classes complémentaires à appliquer aux éléments
+<li> sont à prévoir : .disabled pour marquer un lien non disponible, et .active pour marquer le lien
+couramment activé.
+Fil d'ariane : la classe .breadcrumb permet de définir un fil d'ariane composé de lien et indiquant le chemin
+vers la page courante à l'intérieur du site. La classe s'applique à l'élément <ul>.
+Pagination : la classe .pagination permet de définir un bloc de pagination permettant de naviguer dans de
+grandes listes. Elle s'applique à l'élément <ul>. Les classes .disabled et .active doivent pouvoir s'appliquer
+aux éléments internes.*/
+
+.navbar {
+	background-color: grey;
+    list-style-type: none;
+    padding: 0;
+    width: 50%;
+}
+
+
+.navbar__item {
+    color: white;
+}
+
+.navbar__item a {
+	text-decoration: none;
+	display: block;
+	width: 100%;
+	color: black;
+}
+
+.navbar__item:hover {
+	background: #B9B9B9;
+}
+
+.navbar__item:active{
+	color: red;
+}
+
+.navbar__item:disabled{
+	color: blue;
+}
+
+.navbar--inline {
+	background-color: grey;
+    list-style-type: none;
+    padding: 0;
+    width: 50%;
+}
+
+.navbar__item--inline{
+	display: inline;
+}
