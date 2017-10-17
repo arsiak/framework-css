@@ -1,0 +1,98 @@
+/*L'objectif est de compléter les classes génériques de typographie de la séance 1 en
+ajoutant des éléments de mise en page basés sur des boites. La aussi, il faut produire un
+fichier css et un fichier html de démo. Bien entendu, ces documents doivent
+impérativement être validés et testés sur différents navigateurs, ainsi que sur des
+terminaux mobiles (smartphones, tablettes).
+ Boutons :
+On va créer un ensemble de classes pour gérer l'apparence de boutons. Ces classes
+doivent pouvoir être appliquées aux éléments <a> et <button>. Le principe est de créer
+une classe de base définissant des caractéristiques par défaut des boutons, et des
+classes modifiant cette apparence par défaut et utilisées en complément, pour gérer la
+taille, la couleur et l'apparence générale du bouton. On utilisera donc ces classes de cette
+manière : <button class="btn btn-blue btn-lg">large blue button</button>.
+La encore, il s'agit de définir des choses seimples et réutilisables, mais robustes, qui
+peuvent dervir de base pour de nombreux projets.
+La classe de base .btn : il faut penser à définir, entre autre,
+• la taille des textes et des lignes, le padding,
+• le centrage des textes dans le bouton,
+• la couleur de fond et du texte,
+• la bordure et sa forme (radius),
+• la forme du curseur en cas de survol,
+• le changement d'apparence lorsque le bouton et actif ou survolé,
+La taille des boutons : prévoir 2 tailles en plus de la taille par défaut : small et large. La
+taille agit sur la taille des textes et des lignes, avec ajustement du padding et
+éventuellement du radius.
+La couleur des boutons : prévoir différentes classes pour spécifier la couleur des
+boutons – 3 classes en plus de la couleur par défaut. Ajuster si nécessiare la couleur des
+textes, la couleur de la bordure. Ne pas oublier le changement d'apparence en cas de
+survol ou de bouton activé.
+Apparence des boutons : prévoir différentes classes pour modifier l'apparence générale
+des boutons. On peut par exemple penser au cas suivants :
+• boutons « flat » : bouton à plat, sans bordure, de couleur uniforme, et sans radius.
+• boutons « extra large » : boutons de largeur 100 % du conteneur,
+• boutons « fancy » : boutons exagérément stylés (gradient de couleur, ombre, effet
+3D etc …)
+ Alertes :
+Créer un ensemble de classes pour mettre en forme des messages d'alerte. Ils doivent
+prendre toute la largeur de leur conteneur. Prévoir des alertes de succès, d'information,
+d'avertissement et de danger. */
+
+.btn {
+	border-style: solid;
+	border-width: 0.2rem;
+	background: rgba(0,0,0,0);
+	color: #0085C8;
+	line-height: 1em;
+
+	font-size: 0.8em;
+	text-transform: uppercase;
+	font-weight: 300;
+	padding: 1em 2.5em;
+	text-decoration: none;
+
+	border-radius: 12rem;
+	border-color:#0085C8;
+}
+
+.btn:hover {
+	cursor: pointer;
+	color:#00007A;
+	border-color: #00007A; 
+
+}
+
+.btn:actif {
+	color:#00007A ;
+}
+
+.btn--small {
+	padding: 0.5em 1.25em;
+	font-size: 0.5em;
+}
+
+.btn--large {
+	padding: 1.5em 3em;
+	font-size: 1.2em;
+}
+
+.btn--alert {
+	color: red;
+	background-color: white;
+	border-color: red;
+}
+
+.btn--alert:hover {
+	background-color: red; 
+	color: white;
+	border-color: red;
+}
+
+.btn--black {
+	background-color: black;
+	color: white;
+}
+
+.btn--black:hover {
+	color: white;
+	border-color: black;
+}

@@ -1,18 +1,11 @@
-/*
-• tables : créer une classe pour la mise en forme par défaut des tableaux html. Cette
-classe prend en compte les titre de colonnes, et fait une mise en forme sobre ;
-créer des classes qui viennent compléter cette classe de base pour ajouter des
-éléments supplémentaires de mise en forme : lignes alternées, bordures complètes,
-lignes actives au survol.*/
-
 @import url('https://fonts.googleapis.com/css?family=Merriweather|Open+Sans');
 
 html {
-	font-size: 18px;
+	font-size: 10px;
 }
 
 body {
-	font-size: 1rem;
+	font-size: 1.8rem;
 }
 
 p {
@@ -29,32 +22,32 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
 	font-size: small;
-	font-weight: grey;
+	font-weight: lighter;
 }
 
  
 h1 {
-	font-size: 3rem;
+	font-size: 3.2rem;
 }
 
 h2 {
-	font-size: 2.5rem;
+	font-size: 2.8rem;
 }
 
 h3 {
-	font-size: 2rem;
+	font-size: 2.4rem;
 }
 
 h4 {
-	font-size: 1.75rem;
+	font-size: 2rem;
 }
 
 h5 {
-	font-size: 1.50rem;
+	font-size: 1.80rem;
 }
 
 h6 {
-	font-size: 1.25rem;
+	font-size: 1.50rem;
 }
 
 .text--small {
@@ -85,7 +78,7 @@ strong {
 }
 
 em {
-	font-weight: italic;
+	font-style: italic;
 } 
 
 /*Balise abbr ?*/
@@ -179,12 +172,24 @@ kbd {
 
 .table-classic { 
 	border-spacing: 0.5rem;
-	border-spacing: collapse;
+	border-collapse: collapse;
 }
 
-.table-classic th {
+.table-classic th, td {
 	width: 4rem;
   	height: 2rem;
   	border: 1px solid #ccc;
   	text-align: center;
+  	border:1px solid black;
+ 	padding-left: 1em;
+ 	padding-right: 1em;
 }
+
+.table-classic th { 
+	font-weight: bold;
+}
+
+/*créer des classes qui viennent compléter cette classe de base pour ajouter des
+éléments supplémentaires de mise en forme : lignes alternées, bordures complètes,
+lignes actives au survol.*/
+
