@@ -1,0 +1,185 @@
+$Yellow : yellow;
+$Green : green;
+$Black : black;
+$Red : red;
+$White : white ;
+$btnBgDefault : rgba(0,0,0,0);
+$PrimaryBtnColor : #0085C8;
+$SecondaryBtnColor : #00007A;
+
+$btnSize : 0.8em;
+$btnBorderSize : 0.2rem;
+
+@mixin btntaille($radius : 12em, $bordersize : 0.2rem){
+	border-style: solid;
+	border-width: $borderSize;
+	background: $btnBgDefault;
+	color: $PrimaryBtnColor;
+	line-height: 1em;
+
+	font-size: $btnSize;
+	text-transform: uppercase;
+	font-weight: 300;
+	padding: 1em 2.5em;
+	text-decoration: none;
+
+	border-radius: $radius;
+	border-color:$PrimaryBtnColor;
+
+	&:hover{
+		cursor: pointer;
+		color:$SecondaryBtnColor;
+		border-color: $SecondaryBtnColor;	
+	}
+
+}
+
+@mixin btnfonte($size : 0.8em, $weight : 300, $fontcolor1 : $PrimaryBtnColor, $fontcolor2 : $SecondaryBtnColor){
+	border-style: solid;
+	border-width: $btnBorderSize;
+	background: $btnBgDefault;
+	color: $fontcolor1;
+	line-height: 1em;
+
+	font-size: $size;
+	text-transform: uppercase;
+	font-weight: $weight;
+	padding: 1em 2.5em;
+	text-decoration: none;
+
+	border-radius: 12rem;
+	border-color:$PrimaryBtnColor;
+
+	&:hover{
+		cursor: pointer;
+		color:$fontcolor2;
+		border-color: $SecondaryBtnColor;	
+	}
+
+}
+
+@mixin btnstyle($bgcolor : rgba(0,0,0,0), $gradient : auto, $borderstyle : solid, $bordercolor1 : $PrimaryBtnColor, $bordercolor2 : $SecondaryBtnColor, $shadow : auto){
+	border-style: $borderstyle;
+	border-width: $btnBorderSize;
+	background: $bgcolor;
+	color: $PrimaryBtnColor;
+	line-height: 1em;
+
+	font-size: $btnSize;
+	text-transform: uppercase;
+	font-weight: 300;
+	padding: 1em 2.5em;
+	text-decoration: none;
+
+	border-radius: 12rem;
+	border-color:$bordercolor1
+
+	&:hover{
+		cursor: pointer;
+		color:$SecondaryBtnColor;
+		border-color: $bordercolor2;	
+	}
+}
+
+
+.btn {
+	border-style: solid;
+	border-width: $btnBorderSize;
+	background: $btnBgDefault;
+	color: $PrimaryBtnColor;
+	line-height: 1em;
+
+	font-size: $btnSize;
+	text-transform: uppercase;
+	font-weight: 300;
+	padding: 1em 2.5em;
+	text-decoration: none;
+
+	border-radius: 12rem;
+	border-color:$PrimaryBtnColor;
+
+	&:hover{
+		cursor: pointer;
+		color:$SecondaryBtnColor;
+		border-color: $SecondaryBtnColor;	
+	}
+
+	&:actif{
+		color:$SecondaryBtnColor ;	
+	}
+
+	&--small{
+		padding: 0.5em 1.25em;
+		font-size: 0.5em;
+	}
+
+	&--large{
+		padding: 1.5em 3em;
+		font-size: 1.2em;
+
+	}
+
+	&--alert{
+		color: $Red;
+		background-color: $White;
+		border-color: $Red;
+		&:hover{
+			background-color: $Red; 
+			color: $White;
+			border-color: $Red;
+		}
+	}
+
+	&--black{
+		background-color: $Black;
+		color: $White;
+		&:hover{
+			color: $White;
+			border-color: $Black;
+		}
+	}
+
+	&--green{
+		background-color: $Green;
+		color: $White;
+		border-color: $White;
+		&:hover{
+			color: $White;
+			border-color: $White;
+			background-color: $Green;
+		}
+	}
+
+	&--yellow{
+		background-color: $Yellow;
+		border-color: $White;
+		color: $White;
+		&:hover{
+			border-color: $Yellow;
+		}
+	}
+
+	&__text{
+		&--red{
+			color: $Red;
+		}
+		&--yellow{
+			color: $Yellow;
+		}
+		&--green{
+			color: $Green;
+		}
+	}
+
+	&--xxl{
+		width: 100%;
+	}
+
+	&--flat{
+
+	}
+
+	&--fancy{
+
+	}
+}

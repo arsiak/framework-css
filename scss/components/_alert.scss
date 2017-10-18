@@ -1,0 +1,22 @@
+.alert {
+	color:#555;
+    border-radius:10px;
+    padding:10px 10px 10px 36px;
+    margin:10px;
+    &--success{
+    	background-color:#87FF7E ;
+		border: 1px solid black;
+    }
+    &--warning{
+		background-color: #FFF889;
+		border: 1px solid black;    	
+    }
+    &--error{
+    	background-color: #E76264;
+		border: 1px solid black;	
+    }
+    &--info{
+    	background-color: #60C2FF;
+		border : 1px solid black;	
+    }
+}
