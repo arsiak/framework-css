@@ -58,7 +58,7 @@ $btnBorderSize : 0.2rem;
 
 }
 
-@mixin btnstyle($bgcolor : rgba(0,0,0,0), $gradient : auto, $borderstyle : solid, $bordercolor1 : $PrimaryBtnColor, $bordercolor2 : $SecondaryBtnColor, $shadow : auto){
+@mixin btnstyle($bgcolor : rgba(0,0,0,0), $borderstyle : solid, $bordercolor1 : $PrimaryBtnColor, $bordercolor2 : $SecondaryBtnColor, $shadow : auto){
 	border-style: $borderstyle;
 	border-width: $btnBorderSize;
 	background: $bgcolor;
@@ -72,13 +72,33 @@ $btnBorderSize : 0.2rem;
 	text-decoration: none;
 
 	border-radius: 12rem;
-	border-color:$bordercolor1
+	border-color:$bordercolor1;
+
+   	@if $borderstyle == 'solid' {
+
+    
+   	} @else {
+        
+   	}
+
+   	@if $shadow == 'auto' {
+
+    
+   	} @else {
+        
+   	}
 
 	&:hover{
 		cursor: pointer;
 		color:$SecondaryBtnColor;
 		border-color: $bordercolor2;	
 	}
+}
+
+@mixin btncustom($radius : 12em, $bordersize : 0.2rem, $size : 0.8em, $weight : 300, $fontcolor1 : $PrimaryBtnColor, $fontcolor2 : $SecondaryBtnColor, $bgcolor : rgba(0,0,0,0), $gradient : auto, $borderstyle : solid, $bordercolor1 : $PrimaryBtnColor, $bordercolor2 : $SecondaryBtnColor, $shadow : auto){
+	@include btntaille($radius, $bordersize);
+	@include btnfonte($size, $weight, $fontcolor1, $fontcolor2);
+	@include btnstyle($bgcolor, $borderstyle, $bordercolor1, $bordercolor2, $shadow);
 }
 
 
