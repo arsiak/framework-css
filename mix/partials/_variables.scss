@@ -1,0 +1,71 @@
+/* Base */
+$base-text-color: #666666;
+$base-font-family: 'Merriweather', sans-serif;
+$base-font-size: 1.8rem;
+$base-letter-spacing : 0.01rem;
+
+$title-font-family : 'Open Sans', sans-serif, Helvetica, sans-serif; 
+$title-text-color: black; 
+$title-font-weight : bold;
+
+/* Alert */
+$bgColorSuccessAlert : #87FF7E;
+$bgColorWarningAlert : #FFF889;
+$bgColorErrorAlert : #E76264;
+$bgColorInfoAlert : #60C2FF;
+$colorAlert : #555;
+
+/* Button */
+$btnColor : #0085C8;
+$btnBorderColor : #0085C8;
+$btnColorHover : #00007A;
+$btnBorderColorHover : #00007A;
+$btnColorActive : #00007A;
+
+$btnColorAlert: red;
+$btnBorderColorAlert : red;
+$btnBgColorAlert : white;
+$btnColorAlertHover: white;
+$btnBorderColorAlertHover : black;
+
+$btnColorBlack: red;
+$btnBorderColorBlack : red;
+$btnBgColorBlack : black;
+$btnColorBlackHover: white;
+$btnBorderColorBlackHover : black;
+
+$btnColorGreen: white;
+$btnBorderColorGreen : white;
+$btnBgColorGreen : green;
+$btnColorGreenHover: white;
+$btnBgColorGreenHover: green;
+$btnBorderColorGreenHover : white;
+
+$btnColorYellow: white;
+$btnBorderColorYellow : white;
+$btnBgColorYellow : yellow;
+$btnColorYellowHover: white;
+$btnBorderColorYellowHover : yellow;
+
+$btnFontSize: 0.8em;
+$btnRadius : 12rem;
+$btnBorderWidth : 0.2rem;
+
+
+/* Grid */
+$grid-md: 800;
+$grid-sm: 576;
+$grid-lg: 992;
+$grid-xl: 1200;
+$grid__cols: 12;
+
+$map-grid-props: (
+        '': 0,
+        '-sm': $grid-sm,
+        '-md': $grid-md,
+        '-lg': $grid-lg,
+        '-xl': $grid-xl
+);
+
+
+

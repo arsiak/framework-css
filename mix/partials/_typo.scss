@@ -1,14 +1,11 @@
-@import url('https://fonts.googleapis.com/css?family=Merriweather:300|Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Merriweather|Open+Sans');
 
-html {
+html{
 	font-size: 10px;
 }
 
 body {
 	font-size: 1.8rem;
-    font-family: "Merriweather", serif;
-    color: #3A4145;
-    letter-spacing: 0.01rem;
 }
 
 p {
@@ -21,11 +18,11 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: 'Open Sans', sans-serif,
 				Helvetica, sans-serif;
 	font-weight: bold;
-}
 
-h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
-	font-size: small;
-	font-weight: lighter;
+    small {
+        font-size: small;
+        font-weight: lighter;
+    }
 }
 
  
@@ -89,38 +86,43 @@ em {
 
 /* text alignement */
 
-.text-align--center {
-	text-align: center;
+.text-align{
+	&--center {
+		text-align: center;
+	}
+	&--left{
+		text-align: left;
+	}
+	&--right{
+		text-align: right;
+	}
+	&--justify{
+		text-align: justify;
+	}
 }
 
-.text-align--left {
-	text-align: left;
-}
 
-.text-align--right {
-	text-align: right;
-}
-
-.text-align--justify {
-	text-align: justify;
-}
-
-.text--uppercase {
-	text-transform: uppercase;
-}
-
-.text--lowercase {
-	text-transform: lowercase;
+.text{
+	&--uppercase {
+		text-transform: uppercase;
+	}
+	&--lowercase{
+		text-transform: lowercase;	
+	}
 }
 
 /* List styles */
-
-.list--square li {
-	list-style-type: square;
+ul li {
+	list-style-type: circle; 
 }
 
-.list--normal li {
-	list-style-type: none;
+.list {
+	&--square li {
+		list-style-type: square;
+	}
+	&--normal li {
+		list-style-type: none;	
+	}
 }
 
 /* blockquote */
@@ -129,18 +131,16 @@ blockquote {
   	margin-left: 2%;
   	padding-left: 2%;
   	border-left: 3px solid #ccc;
-}
-
-blockquote:before {
-    top: 0;
-    left: 0;
-    content: "\201C";
-}
-
-blockquote:after {
-    top: 0;
-    right: 0;
-    content: "\201D";
+  	&:before{
+  		top: 0;
+  	  	left: 0;
+    	content: "\201C";	
+  	}
+  	&:after{
+  		top: 0;
+   		right: 0;
+    	content: "\201D";	
+  	}
 }
 
 pre {
@@ -148,13 +148,12 @@ pre {
 	white-space: -moz-pre-wrap;
 	white-space: -o-pre-wrap;
 	word-wrap: break-word;
-}
-
-pre code {
-  background-color: #eee;
-  border: 1px solid #999;
-  display: block;
-  padding: 20px;
+	code {
+		background-color: #eee;
+  		border: 1px solid #999;
+  		display: block;
+  		padding: 20px;		
+	}
 }
 
 kbd {
@@ -173,28 +172,25 @@ kbd {
 .table-classic { 
 	border-spacing: 0.5rem;
 	border-collapse: collapse;
-}
-
-.table-classic th, td {
-	width: 4rem;
-  	height: 2rem;
-  	border: 1px solid #ccc;
-  	text-align: center;
-  	border:1px solid black;
- 	padding-left: 1em;
- 	padding-right: 1em;
-}
-
-.table-classic th { 
-	font-weight: bold;
+	th, td{
+		width: 4rem;
+  		height: 2rem;
+ 	 	border: 1px solid #ccc;
+  		text-align: center;
+  		border:1px solid black;
+ 		padding-left: 1em;
+ 		padding-right: 1em;	
+	}
+	th {
+		font-weight: bold;	
+	}
 }
 
 /* bordures complètes,*/
-
 .table--alternate tr:nth-child(even){
-	background-color: #CFCFCF;
+    background-color: #CFCFCF;
 }
 
 .table--hoverable tbody tr:hover {
-	background-color: #CFCFCF;
+    background-color: #CFCFCF;
 }

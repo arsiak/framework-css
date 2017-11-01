@@ -1,0 +1,117 @@
+.navbar {
+    display: flex;
+    align-items: stretch;
+    background-image: white;
+    border: 1px solid black;
+    position: relative;
+    padding: 0;
+
+    flex-wrap: wrap; //If not works puts on .navbarr--left and .navbar--right
+    flex-grow: 1;
+
+    @media all and (max-width: 800px) { 
+      justify-content: space-around;
+    }
+
+    @media all and (max-width: 600px) {
+      -webkit-flex-flow: column wrap;
+      flex-flow: column wrap;
+      padding: 0;
+
+      li:lastoftype a{
+        border-bottom: none;
+      }
+    }
+
+    &__item {
+      align-items: center;
+      display: flex;
+      padding: 0.25rem 0.5rem;
+      
+      &__link {
+        text-decoration: none;
+        font-weight: bold;
+        width: 100%;
+
+        @media all and (max-width: 600px) {
+          text-align: center; 
+          padding: 10px;
+          border-top: 1px solid rgba(255,255,255,0.3); 
+          border-bottom: 1px solid rgba(0,0,0,0.1); 
+        }
+
+        &--isActive{
+          color: red;
+        }
+
+        &-isDisabled{
+          color:blue;
+        }
+      }
+
+      &--inline {
+        text-decoration: none;
+        font-weight: bold;
+        width: 100%;
+      }
+
+      &--isHover{
+        background: #B9B9B9;
+      }
+
+      &:hover{
+        background: #B9B9B9;
+      }
+
+    }
+
+    &--left {
+      justify-content: flex-start;
+    }
+
+    &--right {
+      justify-content: flex-end;
+    }
+
+}
+
+
+.breadcrumb {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+
+  li{
+    display: inline;
+  }
+
+  li+li:before{
+    content: "/\00a0";
+  }
+}
+
+
+.pagination {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+
+    &__item {
+      display: inline;
+
+      &__link {
+        color: black;
+        float: left;
+        padding: 8px 16px;
+        text-decoration: none;
+
+        &--isActive {
+          color: red;
+        }
+
+        &--isDisabled {
+          color:blue;
+        }
+      }
+    }
+}

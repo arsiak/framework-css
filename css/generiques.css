@@ -1,55 +1,119 @@
-/*En utilisant flex, réaliser les composants génériques suivants, qui tous s'appliquent à une structure « <ul>
-<li> <li> </ul> ». Ces composants doivent s'adapter à différentes largeur de terminal.
-Ces composants génériques viendront s'ajouter à votre framework, en compléments des boutons et des règles
-typographiques.
-barre de navigation : la classe .navbar définit une barre de navigation par défaut. Elle s'applique à l'élément
-<ul>. On doit gérer le survol des éléments du menu. 2 classes complémentaires à appliquer aux éléments
-<li> sont à prévoir : .disabled pour marquer un lien non disponible, et .active pour marquer le lien
-couramment activé.
-Fil d'ariane : la classe .breadcrumb permet de définir un fil d'ariane composé de lien et indiquant le chemin
-vers la page courante à l'intérieur du site. La classe s'applique à l'élément <ul>.
-Pagination : la classe .pagination permet de définir un bloc de pagination permettant de naviguer dans de
-grandes listes. Elle s'applique à l'élément <ul>. Les classes .disabled et .active doivent pouvoir s'appliquer
-aux éléments internes.*/
+
 
 .navbar {
-	background-color: grey;
-    list-style-type: none;
+    display: flex;
+    align-items: stretch;
+    background-image: white;
+    border: 1px solid black;
+    position: relative;
     padding: 0;
-    width: 50%;
 }
 
 
 .navbar__item {
-    color: white;
+  align-items: center;
+  display: flex;
+  padding: 0.25rem 0.5rem;
 }
+
+.navbar__item--inline {
+
+}
+
+.navbar--left, .navbar--right {
+  align-items: stretch;
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+}
+
+.navbar--left {
+  justify-content: flex-start;
+}
+
+.navbar--right {
+  justify-content: flex-end;
+}
+
+
 
 .navbar__item a {
 	text-decoration: none;
-	display: block;
+    font-weight: bold;
 	width: 100%;
-	color: black;
 }
 
 .navbar__item:hover {
 	background: #B9B9B9;
 }
 
-.navbar__item:active{
-	color: red;
+
+@media all and (max-width: 800px) {
+  .navbar {
+    justify-content: space-around;
+  }
 }
 
-.navbar__item:disabled{
-	color: blue;
-}
-
-.navbar--inline {
-	background-color: grey;
-    list-style-type: none;
+@media all and (max-width: 600px) {
+  .navbar {
+    -webkit-flex-flow: column wrap;
+    flex-flow: column wrap;
     padding: 0;
-    width: 50%;
+  }
+  
+  .navbar a { 
+    text-align: center; 
+    padding: 10px;
+    border-top: 1px solid rgba(255,255,255,0.3); 
+    border-bottom: 1px solid rgba(0,0,0,0.1); 
+  }
+
+  
+  .navbar li:last-of-type a {
+    border-bottom: none;
+  }
 }
 
-.navbar__item--inline{
+
+
+
+
+
+.breadcrumb {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+}
+
+.breadcrumb li {
 	display: inline;
 }
+
+.breadcrumb li+li:before {
+    content: "/\00a0";
+}
+
+.pagination {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+.pagination li {display: inline;}
+
+.pagination li a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.navbar__item .active, .pagination .active {
+    color: red;
+}
+
+.navbar__item .disabled, .pagination .disabled  {
+    color: blue;
+}
+
+

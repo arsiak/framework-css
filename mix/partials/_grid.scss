@@ -1,0 +1,47 @@
+@mixin container($maxWidth, $containerMargin: 0 auto) {
+    max-width: $maxWidth;
+    margin: $containerMargin;
+}
+
+@mixin container-row($display:flex, $flexWrap: wrap, $width:100%){
+    display : $display;
+    flex-wrap: $flexWrap;
+    width: $width;
+}
+
+@mixin create-mq($breakpoint) {
+  @if($breakpoint == 0) {
+    @content;
+  } @else {
+    @media screen and (min-width: $breakpoint *1px) {
+      @content;
+    }
+  }
+}
+
+@mixin create-col-classes($modifier, $grid-cols, $breakpoint) {
+  @include create-mq($breakpoint) {
+    @for $i from 1 through $grid-cols {
+      &__col#{$modifier}-#{$i} {
+        flex-basis: (100 / ($grid-cols / $i) ) * 1%;
+      }
+    }
+  }
+}
+
+
+.container {
+  @include container(800px, 0 auto);
+
+  &--fluid {
+    @include container(100%, 0 auto);
+  }
+
+  &__row {
+    @include container-row(flex,wrap,100%);
+  }
+    
+  @each $modifier , $breakpoint in $map-grid-props {
+    @include create-col-classes($modifier, $grid__cols, $breakpoint);
+  }
+}

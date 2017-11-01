@@ -1,0 +1,111 @@
+@import 'variables';
+@import 'grid';
+@import 'btn';
+
+
+/* Create Grid*/
+.container {
+  background-color: #88d8b0;
+  padding: 10px;
+  box-sizing: border-box;
+  &__row {
+    background-color: #ffeead;
+  }
+  @at-root {
+    [class*='container__col-'] {
+      width: 150px;
+      height: 30px;
+      background-color: #ff6f69;
+      outline: 1px solid #ffcc5c;
+      margin: 10px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
+  }
+}
+
+.container {
+  @include container(800px, 0 auto);
+
+  &--fluid {
+    @include container(100%, 0 auto);
+  }
+
+  &__row {
+    @include container-row(flex,wrap,100%);
+  }
+    
+  @each $modifier , $breakpoint in $map-grid-props {
+    @include create-col-classes($modifier, $grid__cols, $breakpoint);
+  }
+}
+
+/* Create btn */
+.btn {
+    @include btn-struct(auto, auto, 12rem, 1em, 1em 2.5em, 15px 30px, relative); 
+
+    &:hover{
+        cursor: pointer;
+        @include btn-color (initial ,#00007A, #00007A );
+    }
+
+    &:actif{
+        color:#00007A ; 
+    }
+
+    &--small{
+        padding: 0.5em 1.25em;
+        font-size: 0.5em;
+    }
+
+    &--large{
+        padding: 1.5em 3em;
+        font-size: 1.2em;
+
+    }
+
+    &--alert {
+        @include btn-color(red, white, red);
+
+        box-shadow: 0 0.5em #CC1426FF;
+        &:hover {
+            color: white;
+            box-shadow: 0 0.3em #CC1426FF;
+        }
+    }
+
+    &--black{
+        @include btn-color(black, white);
+        &:hover{
+            color: white;
+            border-color: black;
+        }
+    }
+
+    &--green{
+        @include btn-color(green, white);
+        &:hover{
+            @include btn-color(green,white,white);
+        }
+    }
+
+    &--yellow{
+        @include btn-color(yellow, white, white);
+        &:hover{
+            @include btn-color(initial, initial, yellow);
+        }
+    }
+
+    &__text{
+        &--red{
+            color: red;
+        }
+        &--yellow{
+            color: yellow;
+        }
+        &--green{
+            color: green;
+        }
+    }
+}
